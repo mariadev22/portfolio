@@ -1,11 +1,11 @@
 ---
 import { basics } from '@cv'
 import Section from '@/components/Section.astro'
-import WorldMap from '@/icons/WorldMap.astro'
-import Mail from '@/icons/Mail.astro'
-import Phone from '@/icons/Phone.astro'
-import GitHub from '@/icons/GitHub.astro'
-import LinkedIn from '@/icons/LinkedIn.astro'
+import WorldMap from '@/assets/icons/WorldMap.astro'
+import Mail from '@/assets/icons/Mail.astro'
+import Phone from '@/assets/icons/Phone.astro'
+import GitHub from '@/assets/icons/GitHub.astro'
+import LinkedIn from '@/assets/icons/LinkedIn.astro'
 
 
 const { name, label, image, location, profiles, phone, email } = basics
@@ -56,7 +56,7 @@ const linkedUrl = linkedInfo?.url
                     )
                 }
                 {
-                    profiles.map(({ network, url, username }) => {
+                    profiles.map(({ network, url }) => {
                         const Icon = SOCIAL_ICONS[network]
 
                         return (
